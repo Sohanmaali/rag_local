@@ -70,6 +70,7 @@ def extract_relevant_sentences(chunk, query, top_k=3):
 # Step 6: Load local LLM
 # ---------------------------
 model_name = "distilgpt2" 
+# model_name = "EleutherAI/gpt-neo-1.3B"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
@@ -107,4 +108,5 @@ if __name__ == "__main__":
             answer = "Sorry, I don't know the answer."
                     
         print("\nAnswer ============ :\n", answer)
+
  
